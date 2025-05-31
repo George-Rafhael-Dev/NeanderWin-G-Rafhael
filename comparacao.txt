@@ -1,0 +1,21 @@
+INICIO:
+
+LDA 131 (AC = valor de Y)
+
+NOT
+
+ADD 128 (AC= -y)
+
+ADD 130 (AC = -Y+X)
+
+JN FIM JZ FIM ; Ok, entrou no while LDA 130; carrega X ADD 128; AC = AC + 1; LDA 131; carrega Y ADD 129; AC = AC + 2;
+
+STA 130; Atualiza valor de X;
+
+STA 131 (Atualiza valor de Y;)
+
+JMP INICIO; pula para o inicio.
+
+FIM:
+
+HLT
